@@ -22,7 +22,7 @@ export default function ProductCard({ product }) {
     <AnimateOnScroll className="product-card" data-category={product.category}>
       <div className="product-card__image-wrapper">
         <img
-          src={product.image}
+          src={product.image || (product.images && product.images[0])}
           alt={product.name}
           className="product-card__image"
           loading="lazy"

@@ -32,6 +32,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -42,11 +43,13 @@
   text-align: center;
   margin-bottom: 40px;
 }
+
 .brand__icon {
   font-size: 2.5rem;
   margin-bottom: 10px;
   display: block;
 }
+
 .brand__name {
   font-family: "Outfit", sans-serif;
   font-size: 1.75rem;
@@ -124,6 +127,7 @@
   background: #4f46e5;
   transform: translateY(-1px);
 }
+
 .btn-submit:disabled {
   opacity: 0.7;
   cursor: not-allowed;
@@ -142,13 +146,16 @@
 }
 
 @keyframes shake {
+
   0%,
   100% {
     transform: translateX(0);
   }
+
   25% {
     transform: translateX(-5px);
   }
+
   75% {
     transform: translateX(5px);
   }
@@ -163,6 +170,7 @@
   font-size: 0.875rem;
   transition: color 0.2s;
 }
+
 .footer-link:hover {
   color: white;
 }
@@ -205,9 +213,11 @@
 .sidebar.open {
   width: 260px;
 }
+
 .sidebar span.sidebar-text {
   display: none;
 }
+
 .sidebar.open span.sidebar-text {
   display: block;
 }
@@ -224,6 +234,7 @@
   transition: all 0.2s;
   background: rgba(255, 255, 255, 0.05);
 }
+
 .sidebar.open .sidebar-toggle {
   width: 44px;
   margin-inline-end: auto;
@@ -361,13 +372,17 @@
   margin-inline-start: 112px;
   flex-grow: 1;
   padding: 40px 24px 40px 0;
-  width: calc(100% - 108px);
+  width: calc(100% - 112px);
   min-height: 100vh;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .admin-layout.sidebar-active .main-content {
   margin-inline-start: 296px;
+}
+
+.sidebar.open+.main-content {
+  width: calc(100% - 296px);
 }
 
 .admin-page .header {
@@ -498,7 +513,8 @@
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  min-width: 1000px; /* Forces table to a minimum width, triggering scroll inside .table-section without breaking page layout */
+  min-width: 1000px;
+  /* Forces table to a minimum width, triggering scroll inside .table-section without breaking page layout */
 }
 
 .admin-table th {
@@ -561,6 +577,7 @@
   justify-content: center;
   padding: 20px;
 }
+
 .modal-overlay.active {
   display: flex !important;
 }
@@ -651,6 +668,7 @@
   cursor: pointer;
   transition: all 0.2s;
 }
+
 .admin-page .btn--primary {
   background: var(--admin-accent);
   color: white;
@@ -659,10 +677,12 @@
   border-radius: 12px;
   font-weight: 600;
 }
+
 .admin-page .btn--primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
 }
+
 .admin-page .btn--secondary {
   background: #f1f5f9;
   color: #475569;
@@ -780,16 +800,19 @@
   gap: 16px;
   flex-direction: column;
 }
+
 .product-details-text {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
+
 .product-name {
   font-weight: 600;
   color: #1e293b;
   font-size: 0.95rem;
 }
+
 .product-id-text {
   font-size: 0.75rem;
   color: #94a3b8;
@@ -803,10 +826,12 @@
   font-size: 0.75rem;
   font-weight: 600;
 }
+
 .badge--category {
   background: #f1f5f9;
   color: #475569;
 }
+
 .badge--trending {
   background: #fef3c7;
   color: #92400e;
@@ -850,28 +875,20 @@
     transform: rotate(360deg);
   }
 }
+
 @keyframes slideIn {
   from {
     transform: translateX(100%);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
   }
 }
 
-@media (max-width: 1280px) {
-  .main-content {
-    padding: 40px;
-  }
-}
 
-@media (max-width: 1024px) {
-  .main-content {
-    padding: 30px;
-  }
-}
 
 @media (max-width: 768px) {
   .main-content {

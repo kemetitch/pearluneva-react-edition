@@ -61,9 +61,11 @@ export default function ProductDetailPage() {
   }
 
   const productImages =
-    product.images && product.images.length > 1
+    product.images && product.images.length > 0
       ? product.images
-      : [product.image];
+      : product.image
+        ? [product.image]
+        : [];
 
   const related = getRelated(product.id, product.category);
 

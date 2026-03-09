@@ -24,9 +24,11 @@ export default function QuickView({ product, onClose }) {
   if (!product) return null;
 
   const productImages =
-    product.images && product.images.length > 1
+    product.images && product.images.length > 0
       ? product.images
-      : [product.image];
+      : product.image
+        ? [product.image]
+        : [];
 
   const handleAddToCart = () => {
     addToCart(product.id, quantity);
